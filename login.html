@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/common.css"/>
+<script src="js/lib/jquery-2.1.4.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pinkitec_parms.js"></script>
+<script src="js/localstorage.js"></script>
+<script src="js/page_login.js"></script>
+
+<script type="text/javascript" src="js/artdialog/jquery.artDialog.js?skin=aero"></script>
+<title>登录</title>
+</head>
+
+<body style="background:#000a2c;" ondrag="return false;">
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-12 col-md-12 p0 m0"><img src="img/loginBg_01.png" class="img-responsive" alt=""/></div>
+      <div class="col-lg-12 col-md-12 p0 m0"><img src="img/loginBg_02.png" class="img-responsive" alt=""/></div>
+      <div class="col-lg-12 col-md-12 p0 m0"><img src="img/loginBg_03.png" class="img-responsive" alt=""/></div>
+      <div class="col-lg-12 col-md-12 p0 m0" style="position:relative;">
+        <img src="img/loginBg_04.jpg" class="img-responsive" alt=""/>
+        <div class="formBox">
+           <div class="formInputWrap">
+             <div class="formName pull-left"></div>
+             <input type="text" class="formInput" id="username" placeholder="请输入用户名"/>
+           </div>
+           <div class="formInputWrap mt20">
+             <div class="formPsd pull-left"></div>
+             <input id="password" type="password" class="formInput" placeholder="请输入密码"/>
+           </div>
+           <div class="remember clearfix">
+             <label class="pull-left"><input id="saveusername" type="checkbox"> 记住账户</label>
+             <label class="pull-right"><input id="savepassword" type="checkbox"> 记住密码</label>
+           </div>
+           <a class="formBtn formBtn mt20" href="javascript:mylogin()">Login</a>
+           <p class="pull-right version">版本：1.0.0</p>
+        </div>
+        
+      </div>
+      <div class="col-lg-12 col-md-12 p0 m0"><img src="img/loginBg_05.png" class="img-responsive" alt=""/></div>
+  </div>
+</div>
+</body>
+</html>
+<script>
+$(function(){
+	//自动获取焦点
+	$("#userName").focus();
+	//输入框左右居中；
+	var leftTo = ($(window).width()-425)/2
+	$(".formBox").css("left",leftTo);
+	})
+</script>

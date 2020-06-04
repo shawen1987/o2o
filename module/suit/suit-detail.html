@@ -1,0 +1,21 @@
+<nav>
+	<div class="nav-tit" ng-click="goDefault(currentModel.selectSuitCategory)">细节</div>
+	<div class="nav-list" ng-show="currentModel.selectSuitCategory == 'suit'">
+		<a id="collarTab" ng-click="openDetail('suit','collar','XF08','领型选择')" ng-class="{'on':'XF08'==SuitDetail.tabType}">领型</a>
+		<a id="breastpocketTab" ng-click="openDetail('suit','breastpocket','XF04','手巾袋选择')" ng-class="{'on':'XF04'==SuitDetail.tabType}">手巾袋</a>
+		<a id="flapTab" ng-click="openDetail('suit','flap','XF02','下口袋选择')" ng-class="{'on':'XF02'==SuitDetail.tabType}">下口袋</a>
+		<a id="ventTab" ng-click="openDetail('suit','vent','XF05','后开叉选择')" ng-class="{'on':'XF05'==SuitDetail.tabType}">后开叉</a>
+		<a id="cuffTab" ng-click="openDetail('suit','cuff','XF07','袖扣选择')" ng-class="{'on':'XF07'==SuitDetail.tabType}">袖扣</a>
+		<a id="tieTab" ng-click="openDetail('suit','tie','XF13','领带选择')" ng-show="currentModel.style!='XF01004'" ng-class="{'on':'XF13'==SuitDetail.tabType}">领带</a>
+	</div>
+	<div class="nav-list" ng-show="currentModel.selectSuitCategory == 'pants'">
+		<a id="frontdartTab" ng-click="openDetail('pants','frontdart','XK02','前褶')" ng-class="{'on':'XK02'==SuitDetail.tabType}">前褶</a>
+		<a id="frontTab" ng-click="openDetail('pants','frontPocket','XK05','前袋')" ng-class="{'on':'XK05'==SuitDetail.tabType}">前口袋</a>
+		<a id="backTab" ng-click="openDetail('pants','backPocket','XK06','后袋')" ng-class="{'on':'XK06'==SuitDetail.tabType}">后口袋</a>
+	</div>
+</nav>
+<div class="btnSuitContainer" ng-show="currentModel.isCoordinates">
+	<span ng-click="goDefault('suit')"  ng-class="{'btnSuit':true, 'on':'suit'==currentModel.selectSuitCategory}">西装</span>
+	<span ng-click="goDefault('pants')" ng-class="{'btnSuit':true, 'on':'pants'==currentModel.selectSuitCategory}">西裤</span>
+</div>
+<div ui-view></div>

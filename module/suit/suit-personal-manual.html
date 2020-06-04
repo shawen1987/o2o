@@ -1,0 +1,19 @@
+<section>
+	<div class="pro-personal">
+		<h5>锁眼</h5>
+		<div class="sel-list personnal">
+			<ul class="mui-row per-hand" id="selLining">
+				<li ng-click="changeMockButtonhole('manualNormal');" value="normol" ng-class="{'on':'manualNormal'==currentModel.mockButtonhole,'mui-col-xs-4':true}"><img src="img/suit/mockbuttonhole_1.png" /><p>直手工锁眼</p><b></b></li>
+				<li ng-click="changeMockButtonhole('machineNormal');" value="normol" ng-class="{'on':'machineNormal'==currentModel.mockButtonhole,'mui-col-xs-4':true}"><img src="img/suit/mockbuttonhole_2.png" /><p>直机器锁眼</p><b></b></li>
+				<li ng-click="changeMockButtonhole('manualCurve');" value="curve" ng-class="{'on':'manualCurve'==currentModel.mockButtonhole,'mui-col-xs-4':true}"><img src="img/suit/mockbuttonhole_3.png" /><p>弯手工锁眼</p><b></b></li>
+			</ul>
+		</div>
+		<toaster-container toaster-options="{'position-class': 'toast-center','limit': 1,'time-out': 1000,'tap-to-dismiss': false}"></toaster-container>
+		<h5>选择颜色</h5>
+		<div class="sel-color" ng-controller="myController">
+			<ul id="selColor">
+				<li ng-repeat="color in prodPartXian" ng-click="changeThreadColor('lockhole',color.name,color.no)" value="{{color.no}}" ng-class="{'on':color.no==currentModel.buttonholeColor}"><span><img ng-src="{{crfPath+'prod.part.xian/'+modelSize+'/'+color.no+postfix}}" /></span></li>
+			</ul>
+		</div>
+	</div>
+</section>

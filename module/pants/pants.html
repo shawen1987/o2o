@@ -1,0 +1,11 @@
+<header class="pro-title mui-row">
+	<a class="logo" ui-sref="home" style="text-align:center;vertical-align:middle;padding-top:12px;"><img style="width:72%" src="./img/logo.png" ui-sref-opts="{reload:true}"/></a>
+	<div class="pro-title-col"><a id="styleMenu" ui-sref="home.pants.style" ui-sref-opts="{reload:true}" ng-class="{'on':'styleMenu'==suitMenuID}"><img ng-src="{{'styleMenu'!=suitMenuID?(currentModel.suitMenuIDAltered.styleMenu?'./img/pro_title_over.png':'./img/pro_title.png'):'./img/pro_title_on.png'}}"/><span>款式</span></a></div>
+	<div class="pro-title-col"><a id="fabricMenu" ui-sref="home.pants.fabric" ui-sref-opts="{reload:true}" ng-class="{'on':'fabricMenu'==suitMenuID}"><img ng-src="{{'fabricMenu'!=suitMenuID?(currentModel.suitMenuIDAltered.fabricMenu?'./img/pro_title_over.png':'./img/pro_title.png'):'./img/pro_title_on.png'}}" /><span>面料</span></a></div>
+	<div class="pro-title-col"><a id="detailMenu" ui-sref="home.pants.detail" ui-sref-opts="{reload:true}" ng-class="{'on':'detailMenu'==suitMenuID}"><img ng-src="{{'detailMenu'!=suitMenuID?(currentModel.suitMenuIDAltered.detailMenu?'./img/pro_title_over.png':'./img/pro_title.png'):'./img/pro_title_on.png'}}" /><span>细节</span></a></div>
+	<div class="pro-title-col"><a id="sizeMenu" ui-sref="home.pants.size" ui-sref-opts="{reload:true}" ng-class="{'on':'sizeMenu'==suitMenuID}"><img ng-src="{{'sizeMenu'!=suitMenuID?(currentModel.suitMenuIDAltered.sizeMenu?'./img/pro_title_over.png':'./img/pro_title.png'):'./img/pro_title_on.png'}}" /><span>尺寸</span></a></div>
+	<div class="pro-title-col"><a id="previewMenu" ui-sref="home.pants.preview" ui-sref-opts="{reload:true}" ng-class="{'on':'previewMenu'==suitMenuID}"><img ng-src="{{'previewMenu'!=suitMenuID?(currentModel.suitMenuIDAltered.previewMenu?'./img/pro_title_over.png':'./img/pro_title.png'):'./img/pro_title_on.png'}}"/>
+	<span>360°</span></a></div>
+</header>
+
+<div ui-view id="pantsModuleContainer"></div>

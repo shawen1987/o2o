@@ -1,0 +1,18 @@
+<section>
+	<div class="pro-personal">
+		<h5>手工驳头花眼</h5>
+		<div class="sel-list">
+			<ul class="mui-row per-hand" id="selLining">
+				<li ng-click="changeMockButtonhole('xieyan');" value="45度斜眼" ng-class="{'on':'xieyan'==currentModel.mockButtonhole,'mui-col-xs-6':true}"><img src="img/per_point11.jpg" /><p>45度斜眼</p><b></b></li>
+				<li ng-click="changeMockButtonhole('hengyan');" value="横眼" ng-class="{'on':'hengyan'==currentModel.mockButtonhole,'mui-col-xs-6':true}"><img src="img/per_point12.jpg" /><p>横眼</p><b></b></li>
+			</ul>
+		</div>
+		<toaster-container toaster-options="{'position-class': 'toast-center','limit': 1,'time-out': 1000,'tap-to-dismiss': false}"></toaster-container>
+		<h5>选择颜色</h5>
+		<div class="sel-color" ng-controller="myController">
+			<ul id="selColor">
+				<li ng-repeat="color in prodPartXian" ng-click="" value="{{color.no}}" ng-class="{'on':color.no==currentModel.buttonholeColor}"><span><img ng-src="{{color.img}}" /></span></li>
+			</ul>
+		</div>
+	</div>
+</section>

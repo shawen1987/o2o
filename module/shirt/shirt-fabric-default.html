@@ -1,0 +1,33 @@
+<nav>
+	<div class="nav-tit">类型</div>
+	<div class="nav-list">
+		<a class="on" ng-click="changeFabricType($event,1)">素色</a>
+		<a ng-click="changeFabricType($event,2)">条纹</a>
+		<a ng-click="changeFabricType($event,3)">格子</a>
+	</div>
+</nav>
+<section>
+	<div id="slider" class="mui-slider suit-lining">
+		<div id="images" class="model-images" >
+
+		</div>
+	</div>
+	<h5><a ui-sref="home.shirt.fabric.detail"><em><span>￥</span>3,688</em><br /><i>&gt;&nbsp;面料详情</i></a></h5>
+	
+	<div class="sel-list">
+		<ul class="mui-row w" ng-show="fabricTypeShow==null||fabricTypeShow==1">
+			<li class="mui-col-xs-2" type="2D" craft="fabric" onclick="changeCrftItem(this,'fabric','305867-003-00022')"><img src="img/lining_ico15.jpg" /><b></b></li>
+		</ul>
+		<ul class="mui-row w" ng-show="fabricTypeShow==2">
+			<li class="mui-col-xs-2" type="2D" craft="fabric" onclick="changeCrftItem(this,'fabric','305867-002-00022')"><img src="img/lining_ico12.jpg" /><b></b></li>
+			<li class="mui-col-xs-2" type="2D" craft="fabric" onclick="changeCrftItem(this,'fabric','305867-003-00022')"><img src="img/lining_ico13.jpg" /><b></b></li>
+			<li class="mui-col-xs-2" type="2D" craft="fabric" onclick="changeCrftItem(this,'fabric','305867-03P-00022')"><img src="img/lining_ico16.jpg" /><b></b></li>
+		</ul>
+		<ul class="mui-row w" ng-show="fabricTypeShow==3">
+			<li class="mui-col-xs-2 on" type="2D" craft="fabric" onclick="changeCrftItem(this,'fabric','305867-002-00022')"><img src="img/lining_ico11.jpg" /><b></b></li>
+			<li class="mui-col-xs-2" type="2D" craft="fabric" onclick="changeCrftItem(this,'fabric','305867-003-00022')"><img src="img/lining_ico14.jpg" /><b></b></li>
+		</ul>
+	</div>
+	
+	<a class="profess-ico" ui-sref="home.shirt.size.measure">专家<br />服务</a>
+</section>

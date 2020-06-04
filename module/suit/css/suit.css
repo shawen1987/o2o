@@ -1,0 +1,489 @@
+#slider {
+    overflow: hidden;
+}
+
+.model-images {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.model-images .img {
+    position: absolute;
+    top: -3%;
+    left: -10%;
+    width: 120%;
+}
+
+.model-images .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container3DModel {
+    position: relative;
+}
+
+.part-images {
+    margin: 0 auto;
+    width: 25rem;
+    height: 25rem;
+    border: solid 1px silver;
+    background-color: #eeeeee;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+/*
+* 领型局部图片
+*/
+.XF08-part-img {
+    position: absolute;
+    left: -100px;
+    top: -10px;
+    width: 16.66rem;
+    height: 16.66rem;
+    zoom: 0.8;
+}
+
+/*
+* 手巾袋局部图片
+*/
+.XF04-part-img {
+    position: absolute;
+    left: -180px;
+    top: -10px;
+    width: 16.66rem;
+    height: 16.66rem;
+    zoom: 0.9;
+}
+
+/*
+* 下口袋局部图片
+*/
+.XF02-part-img {
+    position: absolute;
+    left: -100px;
+    top: -250px;
+    width: 16.66rem;
+    height: 16.66rem;
+    zoom: 0.9;
+}
+
+/*
+* 后开叉局部图片
+*/
+.XF05-part-img {
+    position: absolute;
+    left: -130px;
+    top: -300px;
+    width: 16.66rem;
+    height: 16.66rem;
+    zoom: 0.9;
+}
+
+/*
+* 袖口开叉局部图片
+*/
+.XF07-part-img {
+    position: absolute;
+    left: -200px;
+    top: -370px;
+    width: 16.66rem;
+    height: 16.66rem;
+    zoom: 1.1;
+}
+
+/*
+*领带局部图片
+*/
+.XF13-part-img {
+    position: absolute;
+    left: -120px;
+    top: -10px;
+    width: 16.66rem;
+    height: 16.66rem;
+    zoom: .9;
+}
+
+.partimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-list a {
+    padding: 0 5px 0 5px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 0.25rem;
+    height: 0.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    border-color: #000;
+    margin: 0 3px;
+}
+
+.indicator .active {
+    background-color: #000;
+}
+
+ul {
+    white-space: nowrap;
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+/* horizontal menu */
+
+.styledescription {
+    width: 80%;
+    margin: 5px auto 0 auto;
+    white-space: pre-wrap;
+    font-size: 1.08rem;
+    line-height: 1.41rem;
+}
+
+.slider-item {
+    vertical-align: top;
+    width: 100%;
+}
+
+#containerFab {
+    /*position: fixed;*/
+    bottom: 10%;
+    z-index: 9999999;
+    /*width: 375px;*/
+    width: 100%;
+}
+
+#containerFab span {
+    overflow-x: auto;
+    padding: 0.14rem 10px;
+    font-weight: bold;
+    font-size: 0.44rem;
+    display: block;
+}
+
+#containerFab ul {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0.41rem;
+    /**height: 50px;*/
+}
+
+#containerFab ul li {
+    padding: 0 3px;
+    text-align: center;
+    position: relative;
+    /*background-color: #eee;*/
+    width: 16%;
+}
+
+#containerFab ul li img {
+    border: solid 1px black;
+}
+
+#containerFab ul li.on img {
+    border-color: #ff9c00;
+    border-width: 0.16rem;
+}
+
+#containerFab ul li b {
+    display: none;
+}
+
+#containerFab ul li.on b {
+    display: block;
+    background: url(../../../img/sel_on.png) no-repeat;
+    position: absolute;
+    right: 4px;
+    top: 1px;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    width: 6px;
+    height: 6px;
+}
+
+#cixiuPopup {
+    display: block;
+    background-color: rgba(255, 255, 255, .88);
+    position: fixed;
+    right: 4px;
+    left: 0px;
+}
+
+.preview_lower_pocket {
+    position: fixed;
+    /*border: solid 1px red;*/
+    left: 55%;
+    top: 50%;
+}
+
+.preview_collar_back {
+    position: fixed;
+    /*border: solid 1px silver;*/
+    left: 45%;
+    top: 33%;
+}
+
+.preview_wristband {
+    position: fixed;
+    /*border: solid 1px blue;*/
+    left: 50%;
+    top: 80%;
+}
+
+.preview_lower_pocket, .preview_collar_back, .preview_wristband {
+    text-align: center;
+    left: 0px;
+    top: 45%;
+    width: 100%;
+    display: block;
+
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 仿宋, serif;
+    line-height: 1em;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-shadow: -1px -1px 2px #999, 1px 1px 0 #333, 1px 1px 0 #444;
+}
+
+.personal-win-img img {
+    width: 100%;
+}
+
+#loadRate {
+    position: absolute;
+    font-size: 0.55rem;
+    font-weight: bold;
+    line-height: 0.97rem;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    background: white;
+    width: 40%;
+    margin-left: 30%;
+    zoom: 2;
+    border-radius: 10px;
+    top: 30%;
+}
+
+.btnSuitContainer {
+    position: absolute;
+    z-index: 9999;
+    padding-left: 0.44rem;
+    font-size: 0.72rem;
+}
+
+.btnSuitContainer .btnSuit {
+    position: relative;
+    top: 19px;
+    padding: 3px 10px;
+    margin: 0;
+    border: solid 1px rgb(156, 156, 156);
+    border-radius: 3px;
+    background-color: rgb(201, 201, 201);
+    color: rgb(122, 122, 122);
+}
+
+.btnSuitContainer .on {
+    background-color: rgb(255, 153, 0);
+    border-color: rgb(255, 153, 0);
+    color: rgb(255, 255, 255);
+}
+
+.btnSuitContainerNoShiftUp .btnSuit {
+    top: 0px;
+}
+
+/** Override for Pants in Suits */
+
+.pantsModuleContainerOverride .img {
+    top: -18%;
+    left: -20%;
+}
+
+.pantsModuleContainerOverride .img img {
+    width: 115%;
+}
+
+/** 1080 */
+
+/*
+* 领型局部图片
+*/
+.XF08-part-img {
+    position: absolute;
+    left: -100px;
+    top: -10px;
+    width: 33.33rem;
+    height: 33.33rem;
+    zoom: 0.8;
+}
+
+/*
+* 手巾袋局部图片
+*/
+.XF04-part-img {
+    position: absolute;
+    left: -180px;
+    top: -10px;
+    width: 33.33rem;
+    height: 33.33rem;
+    zoom: 0.9;
+}
+
+/*
+* 下口袋局部图片
+*/
+.XF02-part-img {
+    position: absolute;
+    left: -100px;
+    top: -250px;
+    width: 33.33rem;
+    height: 33.33rem;
+    zoom: 0.9;
+}
+
+/*
+* 后开叉局部图片
+*/
+.XF05-part-img {
+    position: absolute;
+    left: -130px;
+    top: -300px;
+    width: 33.33rem;
+    height: 33.33rem;
+    zoom: 0.9;
+}
+
+/*
+* 袖口开叉局部图片
+*/
+.XF07-part-img {
+    position: absolute;
+    left: -200px;
+    top: -370px;
+    width: 33.33rem;
+    height: 33.33rem;
+    zoom: 1.1;
+}
+
+/*
+*领带局部图片
+*/
+.XF13-part-img {
+    position: absolute;
+    left: -160px;
+    top: -12px;
+    width: 33.33rem;
+    height: 33.33rem;
+    zoom: 1.1;
+}
+
+.model-images {
+    height: calc(110vw);
+}
+
+.suit-tie {
+    left: 49%;
+    top: 18%;
+    border-color: rgba(0, 0, 0, .4) !important;
+}
+
+.suit-tie i {
+    background-color: rgba(0, 0, 0, .4) !important;
+}
+
+.suit-collar {
+    right: 34%;
+    top: 20%;
+}
+
+.suit-cuff {
+    left: 20%;
+    top: 80%;
+}
+
+.suit-pocket {
+    right: 27%;
+    top: 30%;
+}
+
+.suit-flap {
+    left: 35%;
+    top: 65%;
+}
+
+@media screen and (max-width: 800px) and (min-width: 700px) {
+    .model-images .img img {
+        width: 70%;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .part-images img {
+        width: 100%;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .model-images {
+        height: calc(80vw);
+    }
+
+    .part-images {
+        width: calc(70vw);
+        height: calc(70vw);
+    }
+
+    .pro-personal img {
+        width: 80%;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .pro-detail > a {
+        width: 0.50rem;
+        height: 0.50rem;
+    }
+
+    .pro-detail > a i {
+        width: 0.31rem;
+        height: 0.31rem;
+    }
+
+    .suit-tie {
+        left: 49%;
+        top: 17%;
+    }
+
+    .suit-collar {
+        right: 38%;
+        top: 19%;
+    }
+
+    .suit-cuff {
+        left: 30%;
+        top: 83%;
+    }
+
+    .suit-pocket {
+        right: 34%;
+        top: 29%;
+    }
+
+    .suit-flap {
+        left: 38%;
+        top: 66%;
+    }
+
+}

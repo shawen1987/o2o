@@ -1,0 +1,14 @@
+<nav>
+	<div class="nav-tit" ng-click="goDefault()">细节</div>
+	<div class="nav-list">
+		<!--<a id="pantsTypeTab" ng-click="openDetail('pantsType','XK01','裤型')" ng-class="{'on':'XK01'==SuitDetail.tabType}">裤型</a>-->
+		<!--<a id="waistTab" ng-click="openDetail('waist','XK03','裤腰')" ng-class="{'on':'XK03'==SuitDetail.tabType}">裤腰</a>-->
+		<!--<a id="waistbandHeadTab" ng-click="openDetail('waistbandHead','XK04','裤腰头')" ng-class="{'on':'XK04'==SuitDetail.tabType}">裤腰头</a>-->
+		<a id="frontTab" ng-click="openDetail('frontPocket','XK05','前袋')" ng-class="{'on':'XK05'==SuitDetail.tabType}">前口袋</a>
+		<!--<a id="backdartTab" ng-click="openDetail('backdart','XK07','后褶')" ng-class="{'on':'XK07'==SuitDetail.tabType}">后褶</a>-->
+		<a id="backTab" ng-click="openDetail('backPocket','XK06','后袋')" ng-class="{'on':'XK06'==SuitDetail.tabType}">后口袋</a>
+		<!--<a id="trouserTab" ng-click="openDetail('trouser','XK08','脚口')" ng-class="{'on':'XK08'==SuitDetail.tabType}">脚口</a>-->
+	</div>
+</nav>
+
+<div ui-view></div>

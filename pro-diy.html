@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="pragram" content="no-cache">
+<title>专家预约</title>
+<link rel="stylesheet" href="css/mui.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<section>
+	<div class="pro-diy">
+		<div class="diy-map">
+			<img src="img/map.jpg" />
+		</div>
+		<div class="diy-tit">
+			<i class="ico-60"></i><i class="ico-60"></i><p>量体地点</p><h5>正在定位中......</h5>
+		</div>
+	</div>
+</section>
+
+<div class="cart-list-btn pro-diy-btn">
+	<a class="send-diy">发送预约</a>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script>
+$(function(){
+	var winH=$(window).height();
+	$(".diy-map").height(winH);
+	$(".send-diy").on("touchend",function(){
+		showWin("地址：正在定位中……");
+	});
+});
+
+function showWin(text){
+	var winText=text;
+	var confirmWin='<div class="win confirmWin"><div class="win-box"><h5>请确认量体详细信息</h5><p>'+winText+'</p><h6><a class="cancel-btn">返回修改</a><a class="confirm-btn">确认</a></h6></div></div>';
+	if($(".confirmWin").length>0){
+			$(".confirmWin").show();
+		} else {
+			$(document.body).append(confirmWin);
+			$(".confirmWin").show();
+			$(".cancel-btn").on("touchend",function(){
+				$(".confirmWin").hide();
+			});
+			$(".confirm-btn").on("touchend",function(){
+				$(".confirmWin").hide();
+				showAlertWin("预约成功！");
+			});
+		}
+}
+function showAlertWin(text){
+	var winText=text;
+	var alertWin='<div class="win alertWin"><div class="win-box"><h5>'+winText+'</h5><p>后续我们客服会联系您和您确认相关信息</p></div></div>';
+	if($(".alertWin").length>0){
+		$(".alertWin").show();
+		setTimeout('$(".alertWin").fadeOut(300)',1500);
+	} else {
+		$(document.body).append(alertWin);
+		$(".alertWin").show();
+		setTimeout('$(".alertWin").fadeOut(300)',1500);
+	}
+}
+</script>
+</body>
+</html>

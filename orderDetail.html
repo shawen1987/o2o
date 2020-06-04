@@ -1,0 +1,29 @@
+<section ng-model="order">
+	<div class="order-detail-tit">
+		<div class="pro-logo"></div>
+		<h5 ng-show="false">订单状态：{{order.orderStatus}}</h5>
+		<p>下单时间：{{order.orderDate}}</p>
+		<p>订单编号：{{order.orderNo}}</p>
+	</div>
+	<div class="line"></div>
+	<div class="order-detail-info">
+		<p><span>收货人：{{order.contactName}}</span><span>{{order.contactPhone}}</span></p>
+		<p>收货地址：{{order.contactAddress}}</p>
+	</div>
+	<div class="line"></div>
+	<div class="order-detail-pro mui-row" ng-repeat="item in order.items">
+		<div class="mui-col-xs-4">
+			<div class="mui-col-xs-4 cart-img model-images" style="padding-bottom:120%;" ng-bind-html="innerHtml(item)">
+					
+			</div>
+		</div>
+		<div class="mui-col-xs-6">
+			<h6>西装：{{item.prodname}}</h6>
+			<p ng-repeat="subitem in item.subitems">{{subitem.crftname}}：{{subitem.crftitemname}}</p>
+			<p>￥{{item.netamountprice}}</p>
+		</div>
+		<div class="btn-box" ng-show="false">
+			<a class="btn-w order-cancel" ng-click="buyAgain()">再次购买</a><a class="btn-w">联系客服</a>
+		</div>
+	</div>
+</section>

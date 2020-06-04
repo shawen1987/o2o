@@ -1,0 +1,28 @@
+<section>
+	<div>
+		<div class="pro-detail" ng-show="!SuitDetail.backside">
+			<!--<img src="img/pro4.png" style="width: 65%;" />-->
+			<div id="images" class="model-images">
+
+			</div>
+			<!--<a ng-click="openDetail('pantsType','XK01','裤型')" style="left: 50%; top: 7%;"><i></i></a>-->
+			<!--<a ng-click="openDetail('waist','XK03','裤腰')" style="left: 62%; top: 1%;"><i></i></a>
+			<a ng-click="openDetail('waistbandHead','XK04','裤腰头')" style="left: 55%; top: 5%;"><i></i></a>-->
+			<a ng-click="openDetail('frontPocket','XK05','前袋')" style="left: 62%; top: 15%;"><i></i></a>
+			<!--<a ng-click="openDetail('trouser','XK08','脚口')" style="left: 40%; top: 82%;"><i></i></a>-->
+		</div>
+		<div class="pro-detail" ng-show="SuitDetail.backside">
+			<div id="images-back" class="model-images">
+
+			</div>
+			<!--<a ng-click="openDetail('backdart','XK07','后褶')" style="left: 50%; top: 5%;"><i></i></a>-->
+			<a ng-click="openDetail('backPocket','XK06','后袋')" style="left: 47%; top: 12%;"><i></i></a>
+		</div>
+	</div>
+	<div style="text-align: center;">
+		<img src="img/front.png" ng-click="changeFront()" style="position:relative;width:20%;"/>
+		<img src="img/back.png" ng-click="changeBack()" style="position:relative;width:20%; margin-left: 10%;"/>
+	</div>
+	<div class="pro-detail-tip">请点击画面上圆点选择您要设计的细节</div>
+	<a class="profess-ico" ui-sref="home.pants.size.measure">专家<br />服务</a>
+</section>

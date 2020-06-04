@@ -1,0 +1,26 @@
+<!-- suit style -->
+<nav style="display:none;">
+	<div class="nav-tit">场景</div>
+	<div class="nav-list">
+		<a ng-repeat="secne in pantsScenes" ng-class="{'on':secne.type==currentModel.selectedScene}" ng-click="changeScene(secne.type)">{{secne.name}}</a>
+	</div>
+</nav>
+
+<section style="margin-top:35px;">	
+	<div>
+		<div id="slider">
+			<ul class="slider-group" id="slider-group">
+				<li class="slider-item" ng-repeat="style in currentModel.selectedSceneContent.styles" id="{{style.style}}">
+					<div class="styleContentContainer" style="">
+						<img style="margin-bottom: 0px;" ng-src="{{style.img}}" name="{{style.style}}" type="XK01"/>
+					</div>
+					<p style="" class="styledescription"><b>{{style.title}}</b><span ng-repeat="descItem in style.desc"><br/>{{descItem}}</span></p>
+				</li>
+			</ul>
+			<ul class="mui-slider-indicator">
+				<li ng-repeat="style in currentModel.selectedSceneContent.styles" name="{{style.style}}" type="XK01" ng-class="{'indicator':true,'active':currentModel.style == style.style}"></li>
+			</ul>
+		</div>
+	</div>	
+	<a class="profess-ico" ui-sref="home.pants.size.measure">专家<br />服务</a>
+</section>

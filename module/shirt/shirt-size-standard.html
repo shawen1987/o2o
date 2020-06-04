@@ -1,0 +1,62 @@
+<section>
+	<div class="pro-personal pro-size">
+		<h5>选择体型：</h5>
+		<div class="sel-body">
+			<ul class="mui-row" id="selBody">
+				<li ng-click="changeSize('underweight');" ng-class="{'on':'underweight'==cursize,'mui-col-xs-3':true}"><span><img src="img/pro_size1.png" /></span><p>偏瘦</p></li>
+				<li ng-click="changeSize('standard');" ng-class="{'on':'standard'==cursize,'mui-col-xs-3':true}"><span><img src="img/pro_size2.png" /></span><p>标准</p></li>
+				<li ng-click="changeSize('overweight');" ng-class="{'on':'overweight'==cursize,'mui-col-xs-3':true}"><span><img src="img/pro_size3.png" /></span><p>偏胖</p></li>
+				<li ng-click="changeSize('fat');" ng-class="{'on':'fat'==cursize,'mui-col-xs-3':true}"><span><img src="img/pro_size4.png" /></span><p>胖</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="line"></div>
+	<div class="pro-personal pro-size">
+		<h5>选择尺寸：<a ui-sref="home.shirt.size.helper">尺码助手 &gt;</a></h5>
+		<div class="sel-body sel-size">
+			<ul class="{{moreSize}}" id="selSize">
+				<li ng-click="changeSize('40Y');" ng-class="{'on':'40Y'==cursize,'mui-col-xs-2':true}"><span>40Y</span></li>
+				<li ng-click="changeSize('42Y');" ng-class="{'on':'42Y'==cursize,'mui-col-xs-2':true}"><span>42Y</span></li>
+				<li ng-click="changeSize('44Y');" ng-class="{'on':'44Y'==cursize,'mui-col-xs-2':true}"><span>44Y</span></li>
+				<li ng-click="changeSize('46Y');" ng-class="{'on':'46Y'==cursize,'mui-col-xs-2':true}"><span>46Y</span></li>
+				<li ng-click="changeSize('48Y');" ng-class="{'on':'48Y'==cursize,'mui-col-xs-2':true}"><span>48Y</span></li>
+				<li ng-click="changeSize('50Y');" ng-class="{'on':'50Y'==cursize,'mui-col-xs-2':true}"><span>50Y</span></li>
+				<li ng-click="changeSize('52Y');" ng-class="{'on':'52Y'==cursize,'mui-col-xs-2':true}"><span>52Y</span></li>
+				<li ng-click="changeSize('54Y');" ng-class="{'on':'54Y'==cursize,'mui-col-xs-2':true}"><span>54Y</span></li>
+				<li ng-click="changeSize('56Y');" ng-class="{'on':'56Y'==cursize,'mui-col-xs-2':true}"><span>56Y</span></li>
+				<li ng-click="changeSize('58Y');" ng-class="{'on':'58Y'==cursize,'mui-col-xs-2':true}"><span>58Y</span></li>
+				<li ng-click="changeSize('60Y');" ng-class="{'on':'60Y'==cursize,'mui-col-xs-2':true}"><span>60Y</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="line"></div>
+	<div class="pro-personal pro-set-size">
+		<h5>选择尺寸加减：</h5>
+		<div class="set-size">
+			<ul class="mui-row">
+				<li class="mui-col-xs-6">
+					<p>衣长</p>
+					<img src="img/set_size1.png" />
+					<div class="set-size-box">
+						<div class="set-size-box-inner">
+							<i class="set-size-reduce" ng-click="changeInch('clothesLengthShifting',-1)"></i>
+							<span><em>{{currentModel.body_.clothesLengthShifting}}</em>cm</span>
+							<i class="set-size-add" ng-click="changeInch('clothesLengthShifting',1)"></i>
+						</div>
+					</div>
+				</li>
+				<li class="mui-col-xs-6">
+					<p>袖长</p>
+					<img src="img/set_size2.png" />
+					<div class="set-size-box">
+						<div class="set-size-box-inner">
+							<i class="set-size-reduce" ng-click="changeInch('sleeveLengthShifting',-1)"></i>
+							<span><em>{{currentModel.body_.sleeveLengthShifting}}</em>cm</span>
+							<i class="set-size-add" ng-click="changeInch('sleeveLengthShifting',1)"></i>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

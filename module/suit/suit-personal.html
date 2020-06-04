@@ -1,0 +1,8 @@
+<nav>
+	<div class="nav-tit">个性</div>
+	<div class="nav-list" ng-init="personal.choice = 'embroideryTab'">
+		<a ng-class="{'on':personal.choice == 'embroideryTab'}" ng-click="personal.choice = 'embroideryTab'" id="embroideryTab" ui-sref="home.suit.personal.embroidery">刺绣</a>
+		<a ng-class="{'on':personal.choice == 'manualTab'}" ng-click="personal.choice = 'manualTab'" id="manualTab" ui-sref="home.suit.personal.manual">锁眼</a>
+	</div>
+</nav>
+<div ui-view></div>

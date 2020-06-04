@@ -1,0 +1,40 @@
+<header>
+	<div class="header-tab">
+		<ul class="mui-row" id="cartType">
+			<li class="mui-col-xs-4">全部</li>
+			<li class="mui-col-xs-4 on">待付款</li>
+			<li class="mui-col-xs-4">待收货</li>
+		</ul>
+	</div>
+</header>
+<section>
+	<div class="cart-list">
+		<ul ng-repeat="cartItem in cart">
+			<li class="mui-row">
+				<label class="mui-col-xs-2 cart-radio"><input type="radio" name="cartRadio" checked="checked" /></label>
+				<div class="mui-col-xs-4 cart-img model-images" style="height: 190px;" ng-bind-html="innerHtml(cartItem)">
+					
+				</div>
+				<div class="mui-col-xs-6 cart-info">
+					<h5>{{cartItem.productName}}</h5>
+					<p>￥{{cartItem.fabric.price}}</p>
+					<p>面料：{{cartItem.fabric.name}}</p>
+					<p>尺码：48</p>
+					<h6>
+						数量：<span><i class="set-size-reduce">-</i><em>{{cartItem.proNum}}</em><i class="set-size-add">+</i></span>
+					</h6>
+					<p>实付：￥{{cartItem.totalPrice}}</p>
+					<h4>
+						<a class="order-cancel">取消订单</a><a href="order.html">修改订单</a>
+					</h4>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="cart-list-btn">
+		<a href="pro-diy.html">发送预约</a>
+	</div>
+</section>
+
+<script>

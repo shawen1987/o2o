@@ -1,0 +1,46 @@
+<section>
+	<div ng-show="currentModel.selectSuitCategory == 'suit'">
+		<div class="pro-detail" style="overflow:hidden" ng-show="!SuitDetail.backside">
+			<!--<img src="img/pro2.png" style="width: 65%;" />-->
+			<div id="images" class="model-images" style="overflow:hidden;">
+
+			</div>
+
+			<a ng-click="openDetail('suit','tie','XF13','领带选择')" ng-show="currentModel.style!='XF01004'" class="suit-tie"><i></i></a>
+			<a ng-click="openDetail('suit','collar','XF08','领型选择')" class="suit-collar"><i></i></a>
+			<a ng-click="openDetail('suit','breastpocket','XF04','手巾袋选择')" class="suit-pocket"><i></i></a>
+			<a ng-click="openDetail('suit','flap','XF02','下口袋选择')" class="suit-flap"><i></i></a>
+			<a ng-click="openDetail('suit','cuff','XF07','袖扣选择')" class="suit-cuff"><i></i></a>
+		</div>
+		<div class="pro-detail" ng-show="SuitDetail.backside">	
+			<div id="images-back" class="model-images">
+
+			</div>
+
+			<a ng-click="openDetail('suit','vent','XF05','后开叉选择')" style="left: 50%; top: 85%;"><i></i></a>
+		</div>
+	</div>
+	<div id="pantsModuleContainer" ng-show="currentModel.selectSuitCategory == 'pants'">
+		<div class="pro-detail" ng-show="!SuitDetail.backside">
+			<!--<img src="img/pro4.png" style="width: 65%;" />-->
+			<div id="images" class="model-images">
+
+			</div>
+			<a ng-click="openDetail('pants','frontdart','XK02','前褶')" style="left: 55%; top: 5%;"><i></i></a>
+			<a ng-click="openDetail('pants','frontPocket','XK05','前袋')" style="left: 62%; top: 15%;"><i></i></a>
+		</div>
+		<div class="pro-detail" ng-show="SuitDetail.backside">
+			<div id="images-back" class="model-images">
+
+			</div>
+			<a ng-click="openDetail('pants','backPocket','XK06','后袋')" style="left: 47%; top: 12%;"><i></i></a>
+		</div>
+	</div>
+	<div class="pro-detail" style="margin-right:0">
+		<img src="img/front.png" ng-click="changeFront()" style="position:relative;width:20%;"/>
+		<img src="img/back.png" ng-click="changeBack()" style="position:relative;width:20%; margin-left: 10%;"/>
+	</div>
+	<div class="pro-detail-tip">请点击画面上圆点选择您要设计的细节</div>
+	<a class="profess-ico" ui-sref="home.suit.size.measure">专家<br />服务</a>
+</section>
+

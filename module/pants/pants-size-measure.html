@@ -1,0 +1,31 @@
+<section>
+	<div class="pro-personal pro-size-diy">
+		<img src="img/diy_size.jpg" />
+		<p>专家级量体，一人一版，0元预约。</p>
+		<p class="pro-personal-call"><a href="tel:400-8004-3567">预约热线：400-8004-3567</a></p>
+		<p>在线预约信息：</p>
+		<div class="mui-row">
+				<div class="mui-col-xs-6 mui-row">
+					<div class="mui-col-xs-2">姓名:*</div>
+					<div class="mui-col-xs-4"><input type="text" ng-model="reservation.customername"/></div>
+				</div>
+				<div class="mui-col-xs-6 mui-row">
+					<div class="mui-col-xs-2">电话:*</div>
+					<div class="mui-col-xs-4"><input type="tel" ng-model="reservation.telphone"/></div>
+				</div>
+			</div>
+			<div class="mui-row">
+				<div class="mui-col-xs-2">所在位置:</div>
+				<div class="mui-col-xs-3"><input type="text" ng-model="reservation.province"/></div>
+				<div class="mui-col-xs-1">省</div>
+				<div class="mui-col-xs-3"><input type="text" ng-model="reservation.city"/></div>
+				<div class="mui-col-xs-1">市</div>
+			</div>
+			<p>您的要求：</p>
+			<textarea ng-model="reservation.comments"></textarea>
+		</div>
+	</div>
+	<div class="pro-size-diy-btn">
+		<a id="showWin" ng-click="reservation()">在线预约</a>
+	</div>
+</section>

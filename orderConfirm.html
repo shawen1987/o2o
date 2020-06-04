@@ -1,0 +1,36 @@
+<section>
+	<div class="order-detail-tit">
+		<div class="pro-logo"></div>
+		<p>下单时间：2016-05-12   15:14:23</p>
+	</div>
+	<div class="line"></div>
+	<div class="order-detail-info" ng-click="goContact()" ng-show="isShow">
+		<p><span>收货人：{{contact.name}}</span><span>{{contact.mobile}}</span></p>
+		<p>收货地址：{{contact.address}}</p>
+	</div>
+	<div class="order-detail-info" ng-click="goContact()" ng-show="!isShow">
+		<p>请选择收货地址信息</p>
+	</div>
+	<div class="line"></div>
+	<div class="order-detail-pro mui-row">
+		<div class="mui-col-xs-4 model-images" style="width: 210px;" ng-bind-html="innerHtml">
+			<!--<img src="img/pro2.png" />-->
+			<!--<div class="mui-col-xs-4 cart-img model-images" style="height: 190px;" ng-bind-html="innerHtml">
+				
+			</div>-->
+		</div>
+		<div class="mui-col-xs-5">
+			<h6>西装：{{style}}</h6>
+			<p>领型：{{collar}}</p>
+			<p>手巾袋：{{breast}}</p>
+			<p>下口袋：{{flap}}</p>
+			<p>后开叉：{{vent}}</p>
+			<p>门襟纽扣：金属扣</p>
+			<p>袖扣：{{cuff}}</p>
+			<p>￥{{totalPrice}}</p>
+		</div>
+		<div class="btn-box">
+			<a class="btn-w order-cancel" ng-click="submintOrder()">提交订单</a>
+		</div>
+	</div>
+</section>

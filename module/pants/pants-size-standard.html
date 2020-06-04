@@ -1,0 +1,102 @@
+<section>
+	<div class="pro-personal pro-size">
+		<h5>选择体型：</h5>
+		<div class="sel-body">
+			<ul class="mui-row" id="selBody">
+				<li ng-click="changeBodyType('A');" ng-class="{'on':'A'==currentModel.body_.cursize,'mui-col-xs-3':true}"><span><img src="img/pro_size2.png" /></span><p>修身</p></li>
+				<li ng-click="changeBodyType('B');" ng-class="{'on':'B'==currentModel.body_.cursize,'mui-col-xs-3':true}"><span><img src="img/pro_size3.png" /></span><p>舒适</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="line"></div>
+	<div class="pro-personal pro-size">
+		<h5>选择尺寸：</h5>
+		<div class="sel-body sel-size">
+			<ul class="{{moreSize}}" id="selSize">
+				<li ng-repeat="size in currentModel.body_.sizeArr[currentModel.body_.cursize]" ng-class="{'mui-col-xs-2':true,'on':size==currentModel.body.model}" ng-click="changeSize($index)"><span>{{size}}</span></li>
+			</ul>
+		</div>
+		<!--2016.8.12 S-->
+		<h6 ng-click="showSizeDetail()">尺码明细<i></i></h6>
+
+		<div class="size-helper-table"  id="sizeDetail" style="display:none;">
+			<div class="helper-table-l">
+				<table>
+					<tr><th>型号</th><td></td></tr>
+					<tr><th>规格</th></tr>
+					<tr><th>腰围</th></tr>
+					<tr><th>臀围</th></tr>
+					<tr><th>裤长</th></tr>
+					<tr><th>前浪</th></tr>
+					<tr><th>后浪</th></tr>
+					<tr><th>横裆</th></tr>
+					<tr><th>中档</th></tr>
+					<tr><th>直档</th></tr>
+					<tr><th>脚口</th></tr>
+					<tr><th>折边</th></tr>
+				</table>
+			</div>
+			<div class="helper-table-r">
+				<table>
+					<tr>
+						<td ng-repeat="model in helperSize.model  track by $index">{{model}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="spec in helperSize.spec track by $index">{{spec}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_yaowei in helperSize.pants_yaowei track by $index">{{pants_yaowei}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_tunwei in helperSize.pants_tunwei track by $index">{{pants_tunwei}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_kuchang in helperSize.pants_kuchang track by $index">{{pants_kuchang}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_qianlang in helperSize.pants_qianlang track by $index">{{pants_qianlang}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_houlang in helperSize.pants_houlang track by $index">{{pants_houlang}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_hengdang in helperSize.pants_hengdang track by $index">{{pants_hengdang}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_zhongdang in helperSize.pants_zhongdang track by $index">{{pants_zhongdang}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_zhidang in helperSize.pants_zhidang track by $index">{{pants_zhidang}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_jiaokou in helperSize.pants_jiaokou track by $index">{{pants_jiaokou}}</td>
+					</tr>
+					<tr>
+						<td ng-repeat="pants_jiaokouzhebian in helperSize.pants_jiaokouzhebian track by $index">{{pants_jiaokouzhebian}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="line"></div>
+		<!--2016.8.12 E-->
+	</div>
+
+	<div class="pro-personal pro-set-size">
+		<h5>选择尺寸加减：</h5>
+		<div class="set-size">
+			<ul class="mui-row">
+				<li class="mui-col-xs-6">
+					<img src="img/set_size3.png" />
+					<p>裤长</p>
+					<div class="set-size-box">
+						<div class="set-size-box-inner">
+							<i class="set-size-reduce" ng-click="changeInch('trousersShifting',-1)"></i>
+							<span><em>{{currentModel.body_.trousersShifting}}</em>cm</span>
+							<i class="set-size-add" ng-click="changeInch('trousersShifting',1)"></i>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

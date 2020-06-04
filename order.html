@@ -1,0 +1,114 @@
+<section>
+	<div class="pro-order-tit pro-order-list mui-row">
+		<div class="pro-order-img">
+			<div id="images" class="model-images" style="width:162px;height:182px;position:relative;display: inline-block;padding-bottom:0;" >
+
+			</div>
+			<div id="pants_images" class="model-images"  style="width:162px;height:182px;position:relative;display: inline-block;padding-bottom:0;" ng-show="currentModelCategory=='suit_pants'">
+			</div>
+			<!--<canvas id="canOrderImg" style="display:none;"></canvas>-->
+			<div class="pro-order-img">
+				<p><a ng-click="backToPreview()">返回到360°</a><i></i></p>
+			</div>
+		</div>
+		<div class="pro-order-info mui-col-xs-12">
+			<h5>{{order.productName}}</h5>
+			
+			<h6>面料：{{order.fabricName}}</h6>
+			<!--<p><label><input type="checkbox" ng-model="order.selPants" ng-click="selectOther('pants')"/>选择默认标准码西裤套装</label></p>-->
+			<p ng-show="currentModelCategory!='pants'"><label><input type="checkbox" ng-model="order.selTie" ng-click="selectOther('tie')" />选择领带</label></p>
+			<h6>
+				数量：
+				<span style="position:absolute;">
+					<i  style="float:left;"class="set-size-reduce"  ng-click="reduce()">-</i>
+					<em style="float:left;">{{order.perProductNum}}</em>
+					<i  style="float:left;"class="set-size-add"  ng-click="add()">+</i>
+				</span>
+			</h6>
+			
+			<div class="pro-order-btn">
+				<h4 class="mui-col-xs-6" style="float:left;display:none;"><span>订单总价：</span>-</h4>
+				<a  ng-click="directPay()" style="float: right" ng-show="false">提交订单</a>
+				<a  ng-click="submitOrder()" style="float: right">提交订单</a>
+			</div>
+		</div>
+	</div>
+	<div class="line" style="margin-top: 20px;"></div>
+	<div class="order-detail-info" ng-click="goContact()" ng-show="isShow">
+		<p><span>收货人：{{contact.name}}</span><span>{{contact.mobile}}</span></p>
+		<p>收货地址：{{contact.address}}</p>
+	</div>
+	<div class="order-detail-info" ng-click="goContact()" ng-show="!isShow">
+		<p>请选择收货地址信息</p>
+	</div>
+	<div class="line"></div>
+	<div class="pro-order-list mui-row" ng-show="checkDivShow('suit')">
+		<!--<img src="" id="orderItemImg" ng-show="false"/>-->
+		<input type="text" ng-model="order.suit.itemImg" ng-show="false" value="{{order.suit.itemImg}}" id="orderItemImg">
+		<input type="text" ng-model="order.suit.imgType" ng-show="false" value="{{order.suit.imgType}}" id="orderItemImgType">
+		<input type="text" ng-model="order.suit.imgName" ng-show="false" value="{{order.suit.imgName}}" id="orderItemImgName">
+
+		<div class="mui-col-xs-6">
+			<h5>西服定制详情</h5>
+			<p class="t"><b>细节：</b></p>
+			<p>领型：{{order.suit.collar}}</p>
+			<p>下口袋：{{order.suit.flap}}</p>
+			<p>袖口开叉：{{order.suit.cuff}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<h5>&nbsp;</h5>
+			<p class="t"><b>&nbsp;</b></p>
+			<p>手巾袋：{{order.suit.breast}}</p>
+			<p>后开叉：{{order.suit.slit}}</p>
+			<p>领带：{{order.suit.tie}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<p class="t"><b>刺绣：</b></p>
+			<p>文字内容：{{order.suit.embroideryText}}</p>
+			<p>字体：{{order.suit.embroideryFont}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<p class="t"><b>&nbsp;</b></p>
+			<p>位置：{{order.suit.embroideryPosition}}</p>
+			<p>绣线颜色：{{order.suit.embroideryColor}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<p class="t"><b>锁眼：</b></p>
+			<p>驳头眼：{{order.suit.mockButtonhole}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<p class="t"><b>&nbsp;</b></p>
+			<p>绣线颜色：{{order.suit.buttonholeColor}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<p class="t"><b>尺寸：</b></p>
+			<p>体型：{{order.suit.cursize}}</p>
+			<p>衣长：{{order.suit.clothesLengthShifting}}cm</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<p class="t"><b>&nbsp;</b></p>
+			<p>尺寸：{{order.suit.model}}</p>
+			<p>袖长：{{order.suit.sleeveLengthShifting}}cm</p>
+		</div>
+	</div>
+	<div class="line" ng-if="currentModelCategory=='suit_pants'"></div>
+	<div class="pro-order-list mui-row" ng-show="checkDivShow('pants')">
+		<div class="mui-col-xs-6">
+			<h5>西裤定制详情</h5>
+			<p class="t"><b>细节：</b></p>
+			<p>前褶：{{order.pants.frontdart}}</p>
+			<p>裤腰头：{{order.pants.waistbandHead}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<h5>&nbsp;</h5>
+			<p class="t"><b>&nbsp;</b></p>
+			<p>前袋：{{order.pants.frontPocket}}</p>
+			<p>后袋：{{order.pants.backPocket}}</p>
+		</div>
+		<div class="mui-col-xs-6">
+			<p class="t"><b>尺寸：</b></p>
+			<p>款型：{{order.pants.cursize}}</p>
+			<p>裤长：{{order.pants.trousersShifting}}cm</p>
+		</div>
+	</div>
+</section>

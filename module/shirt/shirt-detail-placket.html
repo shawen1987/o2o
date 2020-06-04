@@ -1,0 +1,17 @@
+<section>
+	<div id="part-images" class="part-images">
+	</div>
+	<div class="pro-detail-tip">
+		<h6>明门襟</h6>
+		<p>比较经典的造型</p>
+		<p>搭配正装休闲西装皆可</p>
+	</div>
+	
+	<div class="sel-list">
+		<h6><span class="on">门襟选择</span></h6>
+		<ul class="mui-row" id="selLining">
+			<li ng-repeat="lingdai in prodPartLingdai" class="mui-col-xs-2 {{$index==0?'on':''}}" type="2D" craft="XF13" ng-click="changeCrftItem($event,'prod.part.lingdai',lingdai.no)"><img ng-src="{{lingdai.img}}" /><b></b></li>
+		</ul>
+	</div>
+	<a class="profess-ico" ui-sref="home.shirt.size.measure">专家<br />服务</a>
+</section>

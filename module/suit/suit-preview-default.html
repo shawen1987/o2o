@@ -1,0 +1,35 @@
+
+	<div class="btnSuitContainer" ng-show="currentModel.isCoordinates" >
+		<span ng-click="changeModel('suit')"  ng-class="{'btnSuit':true, 'on':'suit'==currentModel.selectSuitCategory}">西装</span>
+		<span ng-click="changeModel('pants')" ng-class="{'btnSuit':true, 'on':'pants'==currentModel.selectSuitCategory}">西裤</span>
+	</div>
+	<div class="suit-preview mui-row" style="height: 2.22rem;margin-top:1.38rem; ">
+		<div class="mui-col-xs-3" style="float:right; "><a ng-click="immediateOrder()">马上下单</a></div>
+	</div>
+	<div id="loadRate" style="display none;"></div>
+	<div style="overflow:hidden; ">
+		<div class="container3DModel" id="3dmodel">
+			<div id="images" ng-class="{'model-images':true, 'pantsModuleContainerOverride':'pants'==currentModel.selectSuitCategory}">
+
+			</div>
+			<!--<div id="orderImages" class="model-images" ng-show="false">
+
+			</div>-->
+			<div id="rollMeTest">
+				<canvas id="canvasXXX" style="width:100%">  
+					<p>Your browserdoes not support the canvas element!</p> 
+				</canvas>
+			</div>
+		</div>
+	</div>
+	<div class="suit-preview">
+		<p class="mui-text-center">您可以360度浏览您的作品如需调整，可以由导航回到之前的步骤</p>
+		<canvas id="canOrderImg" style="display:none;"></canvas>
+	</div>
+<div id="researchDiv" style="display:none;">
+	<input type="button" onclick="ShowInCanvas()" value="Canvas Show"></input></br/>
+	<input type="button" onclick="createFilmImage()" value="Create Film"></input></br/>
+	<input type="button" onclick="loadNew3DDisplay()" value="Refreshing Canvas"></input></br/>
+   
+	
+</div>

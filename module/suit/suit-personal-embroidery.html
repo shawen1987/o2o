@@ -1,0 +1,44 @@
+<section ng-controller="myController">
+	<div class="pro-personal">
+		<h5>输入文字内容:{{remaining()}}/20</h5>
+		<p><input type="text" ng-model="currentModel.embroideryText" ng-change="changeEmbroideryText()" maxlength="20"/></p>
+		<h5>选择位置</h5>
+		<div class="sel-list">
+			<ul class="mui-row" id="selLining">
+				<li ng-click="changeEmbroideryPosition('lower pocket', '左挂面');" ng-class="{'mui-col-xs-s':true, 'on':'lower pocket'==currentModel.embroideryPosition}"><img src="img/suit/embroidery_1.png"><p>左挂面</p><b></b></li>
+				<li ng-click="changeEmbroideryPosition('collar back','领底呢');" ng-class="{'mui-col-xs-l':true, 'on':'collar back'==currentModel.embroideryPosition}"><img src="img/suit/embroidery_2.png"><p>领底呢</p><b></b></li>
+				<li ng-click="changeEmbroideryPosition('wristband','右袖叉');" ng-class="{'mui-col-xs-s':true, 'on':'wristband'==currentModel.embroideryPosition}"><img src="img/suit/embroidery_3.png"><p>右袖叉</p><b></b></li>
+			</ul>
+		</div>
+		<h5>选择字体</h5>
+		<toaster-container toaster-options="{'position-class': 'toast-center','limit': 1,'time-out': 1000,'tap-to-dismiss': false}"></toaster-container>
+		<div class="sel-row" ng-controller="myController">
+			<ul class="mui-row" id="selRow">
+				<li ng-click="changeFont('楷体','0')" value="KaiTi" ng-class="{'on':'0'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('华文行楷','1')" value="STXingkai" ng-class="{'on':'1'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('隶书','2')" value="LiSu" ng-class="{'on':'2'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('行书','3')" value="行书" ng-class="{'on':'3'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('普通小写英文字体','4')" value="e1" ng-class="{'on':'4'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('小写罗马字体','5')" value="e2" ng-class="{'on':'5'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+			</ul>
+		</div>
+		<h5>选择颜色</h5>
+		<div class="sel-color">
+			<ul id="selColor">
+				<li ng-repeat="color in prodPartXian" ng-click="changeThreadColor('embroidery',color.name,color.no)" value="{{color.no}}" ng-class="{'on':color.no==currentModel.embroideryColor}"><span><img ng-src="{{crfPath+'prod.part.xian/'+modelSize+'/'+color.no+postfix}}" /></span></li>
+			</ul>
+		</div>
+		<div class="suit-save-btn" ng-show="fabCanPreviewEmbroidery()">
+			<button id="showPreview" ng-click="openCiXiuPreview()" ng-disabled="checkPreviewEnabled()">查看效果</button>
+		</div>
+	</div>
+	<div id="cixiuPopup"  ng-show="showWinCiXiu">
+		<div class="mui-row">
+			<i class="win-close" ng-click="closeCiXiuPreview()"></i>
+		</div>
+		<div class="personal-win-img">
+			<img src="{{previewUrl}}" alt="{{currentModel.embroideryText}}"/>
+			<span class="{{cixiuClass}}" style="color:{{fontColor}};">{{currentModel.embroideryText}}</span>
+		</div>
+	</div>
+</section>

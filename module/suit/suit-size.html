@@ -1,0 +1,8 @@
+<nav>
+	<div class="nav-tit">尺寸</div>
+	<div class="nav-list" ng-init="sizePage.measureWay = 'measureTab'">
+		<a ng-class="{'on':sizePage.measureWay == 'measureTab'}" ng-click="sizePage.measureWay = 'measureTab'" id="measureTab" ui-sref="home.suit.size.measure">预约量体</a>
+		<a ng-class="{'on':sizePage.measureWay == 'standardTab'}" ng-click="sizePage.measureWay = 'standardTab'" id="standardTabTab" ui-sref="home.suit.size.standard">标准尺码</a>
+	</div>
+</nav>
+<div ui-view></div>

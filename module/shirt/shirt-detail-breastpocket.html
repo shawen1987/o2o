@@ -1,0 +1,17 @@
+<section>
+	<div id="part-images" class="part-images">
+	</div>
+	<div class="pro-detail-tip">
+		<h6>袋盖口袋</h6>
+		<p>休闲衬衣口袋</p>
+		<p>可根据您的喜好选择</p>
+	</div>
+	
+	<div class="sel-list">
+		<h6><span class="on">胸袋选择</span></h6>
+		<ul class="mui-row" id="selLining">
+			<li ng-repeat="breastpocket in shirtCrfs[2].data" class="mui-col-xs-2 {{$index==0?'on':''}}" type="2D" craft="XF04" ng-click="changeCrftItem($event,'XF04',breastpocket.no)"><img ng-src="{{breastpocket.img}}" /><b></b></li>
+		</ul>
+	</div>
+	<a class="profess-ico" ui-sref="home.shirt.size.measure">专家<br />服务</a>
+</section>

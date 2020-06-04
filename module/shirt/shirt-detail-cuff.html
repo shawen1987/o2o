@@ -1,0 +1,17 @@
+<section>
+	<div id="part-images" class="part-images">
+	</div>
+	<div class="pro-detail-tip">
+		<h6>无折直袖头</h6>
+		<p>两粒扣子横向排列</p>
+		<p>可调节袖子松紧，时尚修身</p>
+	</div>
+	
+	<div class="sel-list">
+		<h6><span class="on">袖头选择</span></h6>
+		<ul class="mui-row" id="selLining">
+			<li ng-repeat="cuff in shirtCrfs[4].data" class="mui-col-xs-2 {{$index==0?'on':''}}" type="2D" craft="XF07" ng-click="changeCrftItem($event,'XF07',cuff.no)"><img ng-src="{{cuff.img}}" /><b></b></li>
+		</ul>
+	</div>
+	<a class="profess-ico" ui-sref="home.shirt.size.measure">专家<br />服务</a>
+</section>

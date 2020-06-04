@@ -1,0 +1,21 @@
+<section>
+	<div id="slider" class="mui-slider suit-lining" >
+		<!--<img src="img/pro4.png" style="width: 70%;" />-->
+		<div id="images" class="model-images" >
+
+		</div>
+	</div>
+	<h5 ng-show="false">
+		<em style="color:#555" ng-show="false"><span>￥</span>{{prodPrice | number}}</em><br />
+		<a ng-show="fabHasDesc(currentModel.fabric.no)" ui-sref="home.pants.fabric.detail"><i>>&nbsp;面料详情</i></a>
+	</h5>
+	<div id="containerFab" >
+		<div><span class="on">面料精选</span></div>
+		<ul>
+			<li ng-repeat="fabric in currentModel.fabricinfos" ng-show="fabric.scenes.indexOf(currentModel.selectedScene)!=-1 && fabric.brand == currentModel.fabricbrandView.no && fabric.hasimg == true"
+				ng-class="{'on':fabric.no == currentModel.fabric.no}" type="2D" craft="fabric" ng-click="changeFabric($event,'fabric',fabric.no)"><img ng-src="{{crfPath+'fabric/'+modelSize+'/'+fabric.no+postfix}}" /><b></b></li>
+		</ul>
+	</div>
+	
+	<a class="profess-ico" ui-sref="home.pants.size.measure">专家<br />服务</a>
+</section>

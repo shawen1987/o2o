@@ -1,0 +1,34 @@
+<section>
+	<div class="pro-personal shirt-personal" ng-controller="myController">
+		<h5>输入文字内容</h5>
+		<p><input type="text" maxlength="20" placeholder="请输入文字" /></p>
+		<h5>选择位置</h5>
+		<div class="sel-list shirt-per-list">
+			<ul class="mui-row" id="selLining">
+				<li ng-click="changeEmbroideryPosition('lingjiao');" value="领角" ng-class="{'on':'lingjiao'==currentModel.embroideryPosition,'mui-col-xs-4':true}"><img src="img/per_point13.jpg" /><b></b></li>
+				<li ng-click="changeEmbroideryPosition('pingkou');" value="胸前平扣" ng-class="{'on':'pingkou'==currentModel.embroideryPosition,'mui-col-xs-4':true}"><img src="img/per_point14.jpg" /><b></b></li>
+				<li ng-click="changeEmbroideryPosition('liangkoujian');" value="胸前两扣间" ng-class="{'on':'liangkoujian'==currentModel.embroideryPosition,'mui-col-xs-4':true}"><img src="img/per_point15.jpg" /><b></b></li>
+				<li ng-click="changeEmbroideryPosition('xiongqian');" value="胸前" ng-class="{'on':'xiongqian'==currentModel.embroideryPosition,'mui-col-xs-4':true}"><img src="img/per_point16.jpg" /><b></b></li>
+				<li ng-click="changeEmbroideryPosition('shangxiukou');" value="上袖口" ng-class="{'on':'shangxiukou'==currentModel.embroideryPosition,'mui-col-xs-4':true}"><img src="img/per_point17.jpg" /><b></b></li>
+			</ul>
+		</div>
+		<h5>选择字体</h5>
+		<toaster-container toaster-options="{'position-class': 'toast-center','limit': 1,'time-out': 1000,'tap-to-dismiss': false}"></toaster-container>
+		<div class="sel-row" >
+			<ul class="mui-row" id="selRow">
+				<li ng-click="changeFont('楷书','0')" value="KaiTi" ng-class="{'on':'0'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('华文行楷','1')" value="STXingkai" ng-class="{'on':'1'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('隶书','2')" value="LiSu" ng-class="{'on':'2'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('行书','3')" value="行书" ng-class="{'on':'3'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('普通小写英文字体','4')" value="en1" ng-class="{'on':'4'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+				<li ng-click="changeFont('小写罗马字体','5')" value="en2" ng-class="{'on':'5'==currentModel.selectedFont,'mui-col-xs-3':true}"><span></span></li>
+			</ul>
+		</div>
+		<h5>选择颜色</h5>
+		<div class="sel-color" >
+			<ul id="selColor">
+				<li ng-repeat="color in prodPartXian" ng-click="changeThreadColor(color.description,color.no)" value="{{color.no}}" class="{'on':color.no==currentModel.embroideryColor}"><span><img ng-src="{{color.img}}" /></span></li>
+			</ul>
+		</div>
+	</div>
+</section>

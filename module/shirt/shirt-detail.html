@@ -1,0 +1,14 @@
+<nav>
+	<div class="nav-tit" ui-sref="home.shirt.detail.default">细节</div>
+	<div class="nav-list">
+		<a id="collarTab" ui-sref="home.shirt.detail.collar" ng-class="{'on':'collarTab'==tabSelectedID}">领型</a>
+		<a id="collarstandTab" ui-sref="home.shirt.detail.collarstand" ng-class="{'on':'collarstandTab'==tabSelectedID}">领座</a>
+		<a id="placketTab" ui-sref="home.shirt.detail.placket" ng-class="{'on':'placketTab'==tabSelectedID}">门襟</a>
+		<a id="backpieceTab" ui-sref="home.shirt.detail.backpiece" ng-class="{'on':'backpieceTab'==tabSelectedID}">后片</a>
+		<a id="breastpocketTab" ui-sref="home.shirt.detail.breastpocket" ng-class="{'on':'breastpocketTab'==tabSelectedID}">胸袋</a>
+		<a id="cuffTab" ui-sref="home.shirt.detail.cuff" ng-class="{'on':'cuffTab'==tabSelectedID}">袖头</a>
+		<a id="lapTab" ui-sref="home.shirt.detail.lap" ng-class="{'on':'lapTab'==tabSelectedID}">下摆</a>
+	</div>
+</nav>
+
+<div ui-view></div>

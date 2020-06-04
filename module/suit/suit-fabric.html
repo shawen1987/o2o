@@ -1,0 +1,12 @@
+
+<nav>
+	<div class="nav-tit">面料品牌</div>
+	<div class="nav-list"> 
+		<a ng-repeat="fabricbrand in currentModel.fabricbrands" ng-show="fabricbrand.scenes.indexOf(currentModel.selectedScene)!=-1" ng-class="{'on':fabricbrand.no == currentModel.fabricbrandView.no}" id="{{fabricbrand.id}}" ng-click="changeBrand(fabricbrand.no,fabricbrand.id);">{{fabricbrand.name}}</a>
+	</div>
+</nav>
+<div class="btnSuitContainer" ng-show="false && currentModel.isCoordinates" >
+	<span ng-click="changeModel('suit')"  ng-class="{'btnSuit':true, 'on':'suit'==currentModel.selectSuitCategory}">西装</span>
+	<span ng-click="changeModel('pants')" ng-class="{'btnSuit':true, 'on':'pants'==currentModel.selectSuitCategory}">西裤</span>
+</div>
+<div ui-view></div>

@@ -1,0 +1,35 @@
+<section>
+	<div>
+		<div class="pro-detail" ng-show="isShow">
+			<!--<img src="img/pro3.png" class="model-images" ng-show="isShow" style="width: 65%;" />-->
+			<div id="images" class="model-images" ng-show="isShow">
+
+			</div>
+			<a ui-sref="home.shirt.detail.collar" style="left: 40%; top: 5%;"><i></i></a>
+			<a ui-sref="home.shirt.detail.collarstand" style="left: 40%; top: 5%;"><i></i></a>
+			<a id="placketTab" ui-sref="home.shirt.detail.placket" style="left: 40%; top: 5%;"><i></i></a>
+			<a ui-sref="home.shirt.detail.breastpocket" style="right: 29%; top: 25%;"><i></i></a>
+			<a ui-sref="home.shirt.detail.cuff" style="left: 20%; top: 39%;"><i></i></a>
+			<a ui-sref="home.shirt.detail.lap" style="left: 44%; top: 75%;"><i></i></a>
+		</div>
+		<div class="pro-detail" ng-show="!isShow">
+			<div id="images-back" class="model-images">
+
+			</div>
+
+			<a ui-sref="home.shirt.detail.backpiece" style="left: 50%; top: 85%;"><i></i></a>
+		</div>
+	</div>
+	<div class="pro-detail">
+		<button class="{{button_front}}" type="button" ng-click="change('front')">
+			<i class="icon-arrow-left"></i>
+			正面
+		</button>
+		<button class="{{button_back}}" data-last="Finish" type="button" ng-click="change('back')">
+			背面
+			<i class="icon-arrow-right"></i>
+		</button>
+	</div>
+	<div class="pro-detail-tip">请点击画面上圆点选择您要设计的细节</div>
+	<a class="profess-ico" ui-sref="home.shirt.size.measure">专家<br />服务</a>
+</section>

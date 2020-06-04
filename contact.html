@@ -1,0 +1,59 @@
+<header style="margin-top:50px;" >
+	<div class="header-tab">
+		<ul class="mui-row" id="cartType">
+			<li class="mui-col-xs-12" style="height:50px; line-height:48px;">收货地址</li>
+		</ul>
+	</div>
+</header>
+
+<div class="address-info" style="margin:auto auto;width:80%;">
+
+	<table width="80%">
+		<tr>
+			<td style="width: 200px;line-height: 80px;" required
+			ng-required="true">姓名*</td>
+			<td><input type="text" ng-model="contact.name"/></td>
+		</tr>
+		<tr>
+			<td style="width: 200px;line-height: 80px;">电话</td>
+			<td><input type="tel" ng-model="contact.mobile"/></td>
+		</tr>
+		<tr>
+			<td style="width: 200px;line-height: 80px;">住址</td>
+			<td><input type="text" ng-model="contact.address"/></td>
+		</tr>
+		<!--<tr>
+			<td style="width: 200px;line-height: 80px;">联系人</td>
+			<td><select ng-model="selectedCode" ng-options="order.name for order in orderList">
+					<option value="">--请选择--</option>
+					<option ng-repeat="order in orderList" value="{{order.ordercode}}">{{order.name}}</option>
+				</select>
+			</td>
+		</tr>-->
+	</table>
+	<!--<div class="mui-row">
+		<div class="mui-col-xs-8">
+			<label>姓名*</label><span><input type="text" ng-model="contact.name"/></span>
+		</div>
+	</div>
+	<div class="mui-row">
+		<div class="mui-col-xs-8">
+			<label>电话*</label><span><input type="tel" ng-model="contact.mobile"/></span>
+		</div>
+	</div>
+	<div class="mui-row">
+		<div class="mui-col-xs-12">
+			<label>住址*</label><em><input type="text" ng-model="contact.address"/></em>
+		</div>
+	</div>-->
+	<div class="pro-order-btn" style="text-align: center;width: 80%;margin-top: 20%;" ng-click="saveCantact()">
+		<a>保存并使用</a>
+	</div>
+</div>
+
+<section>
+	
+
+</section>
+
+

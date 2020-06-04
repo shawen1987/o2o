@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app="judgerApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="pragram" content="no-cache">
+<title>如意高级定制</title>
+<link rel="stylesheet" href="css/mui.min.css" />
+<link rel="stylesheet" href="css/toaster.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="module/suit/css/suit.css" />
+<link rel="stylesheet" href="module/pants/css/pants.css" />
+
+<script src="js/pinkitec_parms.js"></script>
+<script src="js/localstorage.js"></script>
+
+<script src="js/lib/mui.min.js"></script>
+<script src="js/lib/angular-1.5.7/angular.min.js"></script>
+<script src="js/lib/angular-1.5.7/angular-animate.min.js"></script>
+<script src="js/lib/angular-1.5.7/angular-sanitize.min.js"></script>
+<script src="js/lib/angular-1.5.7/angular-ui-router.min.js"></script>
+<script src="js/lib/angular-1.5.7/toaster.js"></script>
+<script src="js/lib/jquery-2.1.4.min.js"></script>
+
+<script src="js/resource.js"></script>
+<script src="js/module/pants/pants_resource.js"></script>
+<script src="js/module/shirt/shirt_resource.js"></script>
+<script src="js/module/suit/suit_resource.js"></script>
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
+<script src="js/config.js"></script>
+<script src="js/factory.js"></script>
+<script src="js/productService.js"></script>
+<script src="js/controller.js"></script>
+
+<script src="js/tools.js"></script>
+
+<script src="js/com_main.js"></script>
+<script src="js/research.js"></script>
+</head>
+
+<body id="body">
+
+<!--<input type="text" id="code" value="" />-->
+<div ui-view>
+
+</div>
+
+
+	
+</body>
+<script>
+
+    (function (doc, win) {
+        var _root = doc.documentElement,
+                resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                resizeCallback = function () {
+                    var clientWidth = _root.clientWidth,
+                            fontSize = 36;
+                    if (!clientWidth) return;
+                    fontSize = clientWidth / 30;
+                    _root.style.fontSize = fontSize + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvent, resizeCallback, false);
+        doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+    })(document, window);
+
+</script>
+</html>

@@ -1,0 +1,122 @@
+<!-- load home module -->
+<style type="text/css">
+
+
+    .qrcode-outer{
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        top: 0;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .qrcode-img-content{
+        width: 60%;
+        position: fixed;
+        background-color: rgba(255,255,255,1);
+        top: 50%;
+        left: 50%;
+        z-index: 101;
+        transform: translate3d(-50%,-50%,0);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .qrcode-img-content img{
+        width: 100%;
+    }
+
+    .qrcode-content {
+        position: fixed;
+        z-index: 100;
+        width: 15%;
+        padding: 10px;
+        border-radius: 100%;
+        background: #e66a6a;
+        top: 3%;
+        left: 5%;
+    }
+
+    .qrcode-content div{
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .qrcode-content embed {
+        width: 100%
+    }
+
+    .qrcode-active{
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+<header ng-show="false">
+    <a id="logo" ui-sref="home"></a>
+</header>
+<div class="qrcode-content" ng-click="showQRCode()">
+    <div></div>
+    <embed src="img/qr/code.svg" type="image/svg+xml"></embed>
+</div>
+<section>
+    <!--<a class="banner " >
+        <img src="img/banner1.png"/>
+    </a>-->
+    <div id="hot" style="display:none;position:absolute;"></div>
+    <a class="banner banner1" ui-sref="home.suit">
+        <img src="img/banner_2.png"/>
+        <span>点击进入 》</span>
+    </a>
+    <a class="banner banner2">
+        <img src="img/banner_3.png"/>
+    </a>
+    <div id="shirt" style="display:none;position:absolute;"></div>
+    <a class="banner banner3" ui-sref="home.pants">
+        <img src="img/banner_4.png"/>
+        <span>点击进入 》</span>
+    </a>
+    <div class="index-box">
+        <h4>定制流程</h4>
+        <div class="index-flow">
+            <img src="img/index_flow.png"/>
+        </div>
+        <div class="line"></div>
+        <h5>新手上路</h5>
+        <p>
+            <a>新手指南</a>
+        </p>
+        <div class="line"></div>
+        <h5>付款方式</h5>
+        <p>
+            <a>支付方式及付款</a>
+        </p>
+        <p>
+            <a>支付中常见问题</a>
+        </p>
+        <div class="line"></div>
+        <h5>配送方式</h5>
+        <p>
+            <a>配送方式及范围</a>
+        </p>
+    </div>
+</section>
+<div class="qrcode-outer" ng-click="hideQRCode()"></div>
+<div class="qrcode-img-content">
+    <img src="img/qr/qrcode.jpg">
+</div>
+<script>
+    //@ sourceURL=home.js
+    $(function () {
+        $(".banner1-bg").height($(".banner1").height()-20);
+    });
+</script>

@@ -1,0 +1,21 @@
+<section>
+
+		<!--<img src="img/pro_part.jpg" />-->
+		<div id="part-images" class="part-images" ng-click="goDefault(currentModel.selectSuitCategory)">
+			
+		</div>
+
+	<div class="pro-detail-tip">
+		<h6>{{SuitDetail.selectCraf.name}}</h6>
+		<!--<p>{{SuitDetail.selectCraf.description}}</p>-->
+	</div>
+	
+	<div class="sel-list">
+		<h6><span class="on">{{SuitDetail.selectedTabName}}</span></h6>
+		<ul class="mui-row" id="selLining">
+			<li ng-repeat="item in SuitDetail.tabData" ng-show="item.hasimg==true" ng-class="{'mui-col-xs-2':true,'on':item.no==SuitDetail.selectedCrftNo}" type="2D" craft="{{SuitDetail.tabType}}" ng-click="changeDetailTab($event,SuitDetail.relVal,item.no,item.name)"><img ng-src="{{crfPath+SuitDetail.relVal+'/'+modelSize+'/'+item.no+postfix}}" /><b></b></li>
+		</ul>
+	</div>
+	<a class="profess-ico" ui-sref="home.suit.size.measure">专家<br />服务</a>
+</section>
+

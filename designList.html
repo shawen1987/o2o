@@ -1,0 +1,27 @@
+<!--<header>
+	<div class="header-tab">
+		<ul class="mui-row" id="cartType">
+			<li ng-class="{'mui-col-xs-4':true,'on':type == 'isAll'}" ng-click="cartOrderList('isAll')">全部</li>
+			<li ng-class="{'mui-col-xs-4':true,'on':type == 'isAdd'}" ng-click="cartOrderList('isAdd')">待付款</li>
+			<li ng-class="{'mui-col-xs-4':true,'on':type == 'isPaid'}" ng-click="cartOrderList('isPaid')">待收货</li>
+		</ul>
+	</div>
+</header>-->
+<section>
+	<div class="cart-list">
+		<ul ng-repeat="design in designlist" ng-click="showDesignDetail(design.designcode)">
+			<li class="mui-row">
+				<label class="mui-col-xs-2 cart-radio"><input type="radio" name="cartRadio" checked="checked" /></label>
+				<div class="mui-col-xs-4 cart-img model-images" style="height: 190px;">
+					
+				</div>
+				<div class="mui-col-xs-6 cart-info">
+					<h5>{{design.designcode}}</h5>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+</section>
+
+<script>

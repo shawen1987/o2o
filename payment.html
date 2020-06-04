@@ -1,0 +1,44 @@
+<section>
+	<div class="payment-info">
+		<p><span>合计</span><span>￥<em ng-model="proPrice">{{order.totalPrice}}</em></span></p>
+		<p><span>已抵用</span><span>￥<em>0.00</em></span></p>
+	</div>
+	<div class="line"></div>
+	<div class="payment-total">实付：￥<em>{{order.totalPrice}}</em></div>
+	<div class="line"></div>
+	<div class="payment-list">
+		<h5>选择支付方式</h5>
+		<div class="line"></div>
+		<!--<div class="pay-upcash">
+			<label>
+				<span><i></i>建议与银行卡绑定使用</span>
+				<span><input type="radio" name="payment" /></span>
+			</label>
+		</div>
+		<div class="line"></div>
+		<div class="pay-alipay">
+			<label>
+				<span><i></i>推荐安装支付宝客户端的用户使用</span>
+				<span><input type="radio" name="payment" /></span>
+			</label>
+		</div>
+		<div class="line"></div>-->
+		<div class="pay-wechat">
+			<label>
+				<span><i></i>推荐安装微信客户端的用户使用</span>
+				<span><input type="radio" name="payment" checked /></span>
+			</label>
+		</div>
+		<div class="line"></div>
+		<!--<div class="pay-offline">
+			<label>
+				<span><i></i>线下支付</span>
+				<span><input type="radio" name="payment" /></span>
+			</label>
+		</div>
+		<div class="line"></div>-->
+	</div>
+	<div class="cart-list-btn" ng-model="paymentType" ng-click="confirmPayment(order.paymentType)">
+		<a>确认付款</a>
+	</div>
+</section>
